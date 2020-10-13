@@ -1,4 +1,11 @@
+@font-face {
+    font-family: 'Sofia Pro', helvetica, arial, sans-serif;
+    src: url('/font/sofiapro-light.otf') format("opentype");
+}
+body, html{font-family: 'Sofia Pro';}
+
 #navbarNavAltMarkup .navbar-nav {display: table;}
+a{color: #00c8ff;}
 
 .page-title   {
     padding-top: 2%;
@@ -20,7 +27,7 @@
 .filterBtn:hover{background: transparent; border: 1px solid #00c8ff;}
 .filterBtn .show{background: transparent; border: 1px solid #00c8ff;}
 
-tr.collapsed:before
+#myTable tr.collapsed:before
 {
     content:'+' ;
     display:block;
@@ -28,7 +35,7 @@ tr.collapsed:before
     float: right;
     margin-right: 3%;
 }
-tr:before
+#myTable tr:before
 {
     content:'-' ;
     display:block;
@@ -36,6 +43,7 @@ tr:before
     float: right;
     margin-right: 3%;
 }
+thead tr:before{display: none;}
 
 table {
     width: 100%;
@@ -46,6 +54,7 @@ thead, tbody, tr, th, td { display: block; }
 thead th{border-bottom: 0 !important; border-top: 0 !important; color: #00c8ff;}
 thead{border-bottom: 5px solid #00c8ff;}
 .table th, .table td{border-top:0; border-bottom: 0;}
+
 tr.collapse.in {
   display:table-row;
 }
@@ -68,10 +77,27 @@ tbody td, thead th {
     float: left;
 }
 
+/*IFRAME*/
+
+#footer iframe {display: block !important; margin-left: auto; margin-right: auto;}
+
 
 /*SINGLE*/
 
 #accordion .btn-link{color: #fff; text-decoration: none; text-transform: uppercase;}
+
+/*FOOTER*/
+
+.footer-menu{ width: 45%; float: left;}
+.footer-menu:first-of-type{margin-right: 5%;}
+.footer-menu ul{    
+    margin-left: 0;
+    list-style: none;
+    padding-left: 0;
+    color: white;
+}
+.footer-menu h4{border-bottom: 1px solid #000;}
+.footer-menu li a{color: #00c8ff;}
 
 @media only screen 
   and (min-device-width: 320px) 
@@ -123,6 +149,7 @@ tbody td, thead th {
           align-items: center;
           display: flex;
       }
+    .laptop-size{font-size: 25px;}
 }
 
 @media screen 
@@ -133,4 +160,6 @@ tbody td, thead th {
     .desktop-nav {height: 100vh; position: fixed;}
     .desktop-content{margin-left: auto;}
     .page-newsletter {width: 75%;}
+    .laptop-size{font-size: 30px;}
+    .newsletter-img{}
 }
